@@ -31,6 +31,12 @@
 					window.location.href = "https://z1.m1907.cn/?jx=" + txtWord.value;
 				}
 			}
+
+			document.addEventListener("keydown", function() {
+				if (event.keyCode == 13) {
+					onSearch();
+				}
+			})
 		</script>
 	</head>
 	<body>
