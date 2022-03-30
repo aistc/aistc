@@ -15125,3 +15125,7 @@ select::-ms-expand {
 .jstxt a:hover{
 	color:#C19E66;
 }
+.logos img{
+	width: 150px;
+	margin-bottom: 30px;
+}
