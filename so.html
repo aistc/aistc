@@ -10,43 +10,7 @@
 		<link rel="stylesheet" href="css/themify-icons.css">
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="css/main.css" type="text/css" media="all">
-		<script>
-			var isurls;
-			var num = 0;
-			var urls = ["https://jsap.attakids.com/?url=", "https://vip.parwix.com:4433/player/?url=", "https://okjx.cc/?url="];
-
-			function IsURL(word) {
-				var regular =
-					/^\b(((https?|ftp):\/\/)?[-a-z0-9]+(\.[-a-z0-9]+)*\.(?:com|edu|gov|int|mil|net|org|biz|info|name|museum|asia|coop|aero|[a-z][a-z]|((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]\d)|\d))\b(\/[-a-z0-9_:\@&?=+,.!\/~%\$]*)?)$/i
-				if (regular.test(word)) {
-					isurls = true;
-				} else {
-					isurls = false;
-				}
-			}
-
-			function onSearch() {
-				IsURL(txtWord.value);
-				if (isurls == true) {
-					window.location.href = urls[num] + txtWord.value;
-				} else {
-					window.location.href = "https://z1.m1907.cn/?jx=" + txtWord.value;
-				}
-			}
-			document.addEventListener("keydown", function() {
-				if (event.keyCode == 13) {
-					onSearch();
-				}
-			})
-
-			function update() {
-				if (num < urls.length-1) {
-					num++;
-				} else {
-					num = 0;
-				}
-			}
-		</script>
+		<script type="text/javascript" src="js/analysis.js"></script>
 	</head>
 	<body>
 		<main id="soshow" class="bg-white bg-cover" style="background-image: url(images/bg.jpg);">
@@ -54,7 +18,7 @@
 				<div class="container">
 					<div class="card bg-tranparent">
 						<div class="card-body p-2 mid">
-							<div class="logos"><img src="images/logo.png" onclick="update()" /></div>
+							<div class="logos"><img id="imgbox" src="images/logo.png" onclick="update()" /></div>
 							<div class="input-group mb-3 bg-white btnradius">
 								<i class="ti-search"></i>
 								<input class="form-control form-control-lg btnipt" id="txtWord" type="text"
