@@ -15128,3 +15128,6 @@ select::-ms-expand {
 	width: 150px;
 	margin-bottom: 30px;
 }
+#imgbox{
+	cursor: pointer;
+}
