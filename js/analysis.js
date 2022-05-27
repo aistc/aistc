@@ -1,7 +1,7 @@
 var isurls;
 var num = 0;
 var imgs = ["images/logo.png", "images/logo2.png", "images/logo3.png"]
-var urls = ["https://jsap.attakids.com/?url=", "https://vip.parwix.com:4433/player/?url=", "https://okjx.cc/?url="];
+var urls = [ "https://vip.parwix.com:4433/player/?url=", "https://okjx.cc/?url=","https://www.yemu.xyz/?url="];
 
 function IsURL(word) {
 	var regular =
